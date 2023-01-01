@@ -1,0 +1,11 @@
+.fa {
+  color: #84c1ff;
+  cursor: pointer;
+}
+.fa:hover {
+  color: #2894ff;
+  cursor: pointer;
+}
+.active-mode {
+  color: #2894ff;
+}

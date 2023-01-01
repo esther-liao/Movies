@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A14-MovieList</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+<script src="https://kit.fontawesome.com/19300c9d74.js" crossorigin="anonymous"></script><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- nabvar bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Movie List</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="favorite.html">Favorite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- search bar-->
+    <div class="col-9 col-sm-9">
+      <form class="row row-cols-lg-auto g-3 align-items-center mb-2" id="search-form">
+        <div class="col-auto">
+          <label class="visually-hidden" for="search-input">
+            Search Keyword
+          </label>
+          <input type="text" class="form-control" id="search-input" placeholder="Keyword..." />
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary" id="search-submit-button">
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-3 col-sm-3 d-flex justify-content-end align-items-center">
+      <i class="fa fa-th fa-lg" id='card-button' aria-hidden="true"></i>
+      <i class="fa fa-bars fa-lg mx-2 " id='list-button' aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="row" id="data-panel">
+    <!--movie -->
+  </div>
+</div>
+
+<!-- paginator -->
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center" id="paginator">
+  </ul>
+</nav>
+
+<!-- Movie-Modal -->
+
+<div class="modal fade" id="movie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie-modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="movie-modal-body">
+        <div class="row">
+          <div class="col-sm-8" id="movie-modal-image">
+            <img class="w-100" src="https://movie-list.alphacamp.io/posters/rv1AWImgx386ULjcf62VYaW8zSt.jpg" alt="movie-poster">
+          </div>
+          <div class="col-sm-4">
+            <p><em id="movie-modal-date">release date: 2022/5/20</em></p>
+            <p id="movie-modal-description">This is a movie</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
